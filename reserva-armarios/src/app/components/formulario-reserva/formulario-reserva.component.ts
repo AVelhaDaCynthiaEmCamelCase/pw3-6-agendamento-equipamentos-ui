@@ -67,7 +67,7 @@ export class FormularioReservaComponent implements OnInit {
                     this.router.navigate(['/reservas']);
                 },
                 error: (erro) => {
-                    console.error('Erro ao atualizar reserva:', erro);
+                    alert(erro.message);
                 }
             });
         } else {
@@ -77,7 +77,7 @@ export class FormularioReservaComponent implements OnInit {
                     this.router.navigate(['/reservas']);
                 },
                 error: (erro) => {
-                    console.error('Erro ao cadastrar reserva:', erro);
+                    alert(erro.message);
                 }
             });
         }

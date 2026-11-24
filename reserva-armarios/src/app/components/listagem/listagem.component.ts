@@ -26,7 +26,7 @@ export class ListagemComponent implements OnInit {
                 this.reservas = dados;
             },
             error:(erro) => {
-                console.error('Erro ao buscar reservas:', erro);
+                alert(erro.message);
             }
         });
     }
@@ -42,7 +42,7 @@ export class ListagemComponent implements OnInit {
                 this.listarReservas();
             },
             error: (erro) => {
-                console.error('Erro ao executar regra:', erro);
+                alert(erro.message);
             }
         });
     }
