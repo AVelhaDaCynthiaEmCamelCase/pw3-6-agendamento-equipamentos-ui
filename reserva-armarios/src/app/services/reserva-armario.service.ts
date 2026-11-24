@@ -24,7 +24,7 @@ export class ReservaArmarioService {
     }
 
     // Cadastrar uma reserva
-    cadastrar(obj: ReservaArmario): Observable<ReservaArmario> {
+    cadastrar(obj: Omit<ReservaArmario, 'id'>): Observable<ReservaArmario> {
         return this.http.post<ReservaArmario>(this.apiUrl, obj);
     }
 

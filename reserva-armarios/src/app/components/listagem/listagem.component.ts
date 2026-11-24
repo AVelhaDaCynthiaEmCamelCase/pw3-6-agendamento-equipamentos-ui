@@ -2,11 +2,12 @@ import { Component, OnInit } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { ReservaArmario } from "../../models/reserva-armario.model";
 import { ReservaArmarioService } from "../../services/reserva-armario.service";
+import { RouterLink } from "@angular/router";
 
 @Component({
     selector: 'app-listagem',
     standalone: true,
-    imports: [CommonModule],
+    imports: [CommonModule, RouterLink],
     templateUrl: './listagem.component.html',
     styleUrl: './listagem.component.css'
 })

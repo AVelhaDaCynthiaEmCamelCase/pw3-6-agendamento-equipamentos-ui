@@ -1,6 +1,10 @@
 <div class="container">
     <h2>Reservas de Armários</h2>
 
+    <button routerLink="/reservas/nova">
+        Nova reserva
+    </button>
+
     @if (reservas.length > 0) {
         <div class="lista-reservas">
             @for (reserva of reservas; track reserva.id){
@@ -28,6 +32,10 @@
                     <button
                      (click)="executarRegra(reserva)">
                         {{ reserva.ativo ? 'Desativar reserva' : 'Ativar reserva' }}
+                    </button>
+
+                    <button [routerLink]="['/reservas/editar', reserva.id]">
+                        Editar
                     </button>
                 </div>
             }
